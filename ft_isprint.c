@@ -16,9 +16,3 @@ int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_isprint(46));
-	printf("%d\n", ft_isprint(128));
-}*/
