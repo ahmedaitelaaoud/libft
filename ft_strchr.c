@@ -15,29 +15,19 @@
 char	*ft_strchr(const char *s, int c)
 {
 	char	cc;
-	char	*d;
 	size_t	i;
 
-	d = (char *)s;
 	cc = (char)c;
+	if (!s)
+		return (NULL);
 	i = 0;
-	while (d[i])
+	while (s[i])
 	{
-		if (cc == d[i])
-			return (&d[i]);
+		if (cc == s[i])
+			return ((char *)&s[i]);
 		i++;
 	}
 	if (cc == '\0')
-		return (&d[i]);
+		return ((char *)&s[i]);
 	return (NULL);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	char s[] = "hello";
-// 	char *a;
-
-// 	a = ft_strchr(s, '\0');
-// 	printf("%s", a);
-// }
