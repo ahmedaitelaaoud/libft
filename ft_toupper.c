@@ -18,10 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_toupper('2'));
-	printf("%d\n", ft_toupper('a'));
-	printf("%d\n", ft_toupper('Z'));
-}*/
