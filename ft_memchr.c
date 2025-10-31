@@ -31,14 +31,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-//  #include <stdio.h>
-// // #include <string.h>
-
-// int	main(void)
-//  {
-//  	int b = 300;
-//  	char a  = 44;
-
-//  	printf("%s\n", *(unsigned char *)ft_memchr(&a, b, 4));
-// // 	printf("%p \n", memchr(&a, b, 4));
-// }
