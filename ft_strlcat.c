@@ -6,7 +6,7 @@
 /*   By: aait-ela <aait-ela@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 14:46:08 by aait-ela          #+#    #+#             */
-/*   Updated: 2025/10/29 11:37:42 by aait-ela         ###   ########.fr       */
+/*   Updated: 2025/10/31 21:17:37 by aait-ela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[dst_len + 1] = '\0';
+	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
