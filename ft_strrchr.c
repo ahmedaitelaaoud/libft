@@ -14,30 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*d;
 	char	cc;
 	int		i;
 
 	i = ft_strlen(s);
-	d = (char *)s;
 	cc = (char)c;
+	if (!s)
+		return (NULL);
 	while (i >= 0)
 	{
-		if (d[i] == cc)
+		if (s[i] == cc)
 		{
-			return (&d[i]);
+			return ((char *)&s[i]);
 		}
 		i--;
 	}
 	return (NULL);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	char s[] = "";
-	char *a;
-
-	a = ft_strrchr(s, 'H');
-	printf("%s", a);
-}*/
