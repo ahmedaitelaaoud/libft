@@ -14,16 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	return (ft_isalnum || ft_isdigit);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
-// mem...
-// calloc and strdup
-// linked list
-/*#include <stdio.h>
-int	main(void)
-{
-	printf("%d\n", ft_isalnum(48));
-	printf("%d\n", ft_isalnum(2));
-	printf("%d\n", ft_isalnum(97));
-	return (0);
-}*/
