@@ -35,16 +35,3 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + (nptr[i++] - '0');
 	return (result * sign);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_atoi("123abc"));
-// 	printf("%d\n", ft_atoi("           -12344444444abc"));
-// 	printf("%d\n", ft_atoi(NULL));
-// 	printf("%d\n", atoi("123abc"));
-// 	printf("%d\n", atoi("           -12344444444abc"));
-// 	printf("%d\n", atoi(NULL));
-// }
