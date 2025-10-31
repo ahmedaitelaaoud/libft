@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	i;
 
 	i = 0;
+	if (!src || !dst)
+		return (0);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (size <= dst_len)
@@ -31,12 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + 1] = '\0';
 	return (dst_len + src_len);
 }
-/*nclude <stdio.h>
-
-int	main(void)
-{
-	char dst[8] = "";
-	const char *src = "ABC";
-	size_t ret = ft_strlcat(dst, src, 8);
-	printf("%ld\n", ret);
-}*/
