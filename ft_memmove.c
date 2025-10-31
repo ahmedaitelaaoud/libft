@@ -35,17 +35,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	int *ptr = malloc(sizeof(int));
-	
-	*ptr = 5555;
-	ft_memmove(ptr + 2, ptr, 2);
-
-	printf("%d\n", *ptr);
-	//int ptr2 = 5555;
-	//memmove(&ptr2 + 2, &ptr2, 2);
-	//printf("%d\n", ptr2);
-}
