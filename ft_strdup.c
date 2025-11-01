@@ -27,12 +27,3 @@ char	*ft_strdup(const char *s)
 	new[i] = '\0';
 	return (new);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-//     char *s = NULL;
-//     char *d = ft_strdup(s);
-//     printf("%s \n", d);
-//     free(d);
-// }
