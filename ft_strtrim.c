@@ -30,9 +30,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	return (ft_substr(s1, start, (end - start + 1)));
 }
-// int	main(void)
-// {
-// 	char *s = "xhellox";
-// 	char *s1 = "";
-// 	printf("%s \n", ft_strtrim(s1, s1));
-// }
