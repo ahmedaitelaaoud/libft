@@ -12,12 +12,6 @@
 
 #include "libft.h"
 
-// char to_upper_wrapper(unsigned int i, char c)
-// {
-//     (void)i; // index unused
-//     return (char)ft_toupper((int)c);
-// }
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*new;
@@ -36,9 +30,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-// #include <stdio.h>
-// int main()
-// {
-
-//     printf("%s \n", ft_strmapi("hello",	to_upper_wrapper));
-// }
