@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	ft_intlen(int nb)
 {
@@ -20,8 +21,11 @@ static size_t	ft_intlen(int nb)
 	if (nb == 0)
 		return (1);
 	if (nb < 0)
+	{
 		len++;
-	while (nb > 0)
+		nb = -nb;
+	}
+	while (nb != 0)
 	{
 		nb /= 10;
 		len++;
@@ -46,7 +50,7 @@ static char	*fill(char *str, long nb, size_t len)
 	}
 	return (str);
 }
-static char	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*new;
 	long	nb;
@@ -59,9 +63,3 @@ static char	*ft_itoa(int n)
 	fill(new, nb, len);
 	return (new);
 }
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%s \n", ft_itoa(0));
-// }
