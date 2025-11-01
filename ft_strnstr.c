@@ -21,13 +21,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	len_little = ft_strlen(little);
 	i = 0;
 	if (!big || !little)
-		return NULL;
+		return (NULL);
 	if (len_little == 0)
 		return ((char *)big);
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (j < len_little && big[i + j] == little[j])
+		while (little[j] && (j + i) < len && big[i + j] == little[j])
 			j++;
 		if (j == len_little)
 			return ((char *)big + i);
@@ -35,10 +35,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-// #include <stdio.h>
-// #include <string.h>
-
-// int	main(void)
-// {
-//     printf("%s\n", NULL);
-// }
