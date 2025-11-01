@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	if (!s)
-		return (NULL);
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -25,9 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-// int main()
-// {
-//     ft_putstr_fd("Hello\n", 1); // prints to terminal
-//     ft_putstr_fd("Error\n", 2); // prints to stderr
-
-// }
