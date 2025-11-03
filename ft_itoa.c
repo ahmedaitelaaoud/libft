@@ -32,6 +32,7 @@ static size_t	ft_intlen(int nb)
 	}
 	return (len);
 }
+
 static char	*fill(char *str, long nb, size_t len)
 {
 	str[len] = '\0';
@@ -50,6 +51,7 @@ static char	*fill(char *str, long nb, size_t len)
 	}
 	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*new;
@@ -58,7 +60,8 @@ char	*ft_itoa(int n)
 
 	nb = n;
 	len = ft_intlen(nb);
-	if (!(new = malloc(len + 1)))
+	new = malloc(len + 1);
+	if (!new)
 		return (NULL);
 	fill(new, nb, len);
 	return (new);

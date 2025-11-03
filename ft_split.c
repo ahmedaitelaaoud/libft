@@ -34,6 +34,7 @@ static int	word_count(char const *s, char c)
 	}
 	return (count);
 }
+
 static void	*free_arr(char **arr, int i)
 {
 	while (--i >= 0)
@@ -41,6 +42,7 @@ static void	*free_arr(char **arr, int i)
 	free(arr);
 	return (NULL);
 }
+
 static char	**filling_arr(char c, const char *s, char **arr, int words)
 {
 	int	i;
@@ -65,6 +67,7 @@ static char	**filling_arr(char c, const char *s, char **arr, int words)
 	arr[i] = NULL;
 	return (arr);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	int		words;
