@@ -1,10 +1,14 @@
 #include "libft.h"
 
-static int word_count(char const *s, char c)
+static int	word_count(char const *s, char c)
 {
-	int count = 0;
-	int in_word = 0;
-	int i = 0;
+	int	count;
+	int	in_word;
+	int	i;
+
+	count = 0;
+	in_word = 0;
+	i = 0;
 	while (s[i])
 	{
 		if (s[i] != c && in_word == 0)
@@ -16,20 +20,20 @@ static int word_count(char const *s, char c)
 			in_word = 0;
 		i++;
 	}
-	return count;
+	return (count);
 }
-static void *free_arr(char **arr, int i)
+static void	*free_arr(char **arr, int i)
 {
-	while(--i >= 0)
+	while (--i >= 0)
 		free(arr[i]);
 	free(arr);
-	return NULL;
+	return (NULL);
 }
-static char **filling_arr(char c, const char *s, char **arr, int words)
+static char	**filling_arr(char c, const char *s, char **arr, int words)
 {
-	int i;
-	int start;
-	int end;
+	int	i;
+	int	start;
+	int	end;
 
 	i = 0;
 	start = 0;
@@ -40,46 +44,46 @@ static char **filling_arr(char c, const char *s, char **arr, int words)
 		end = start;
 		while (s[end] && s[end] != c)
 			end++;
-		arr[i] = ft_substr(s,(unsigned int)start,(size_t) end -start);
+		arr[i] = ft_substr(s, (unsigned int)start, (size_t)end - start);
 		if (!arr[i])
-			return(free_arr(arr, i));
+			return (free_arr(arr, i));
 		start = end + 1;
 		i++;
 	}
 	arr[i] = NULL;
-	return arr;
+	return (arr);
 }
 char	**ft_split(char const *s, char c)
 {
-	int words;
-	char **splitted;
+	int		words;
+	char	**splitted;
+
 	if (!s)
-		return NULL;
+		return (NULL);
 	if (!*s)
 	{
 		splitted = (char **)malloc(sizeof(char *));
-		if(!splitted)
-			return NULL;
+		if (!splitted)
+			return (NULL);
 		splitted[0] = NULL;
-		return splitted;
+		return (splitted);
 	}
 	words = word_count((char *)s, c);
 	splitted = (char **)malloc((words + 1) * sizeof(char *));
 	if (!splitted)
-		return NULL;
+		return (NULL);
 	return (filling_arr(c, s, splitted, words));
 }
 #include <stdio.h>
 
 int	main(void)
 {
-	char **splitted;
-	int i;
+	char	**splitted;
+	int		i;
 
 	splitted = ft_split("hello Ahmed Iam your mac", ' ');
 	if (!splitted)
 		return (1);
-
 	i = 0;
 	while (splitted[i])
 	{
