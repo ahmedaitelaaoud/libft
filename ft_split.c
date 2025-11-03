@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aait-ela <aait-ela@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/11/03 13:54:18 by aait-ela          #+#    #+#             */
+/*   Updated: 2025/11/03 13:54:18 by aait-ela         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	word_count(char const *s, char c)
@@ -73,26 +85,4 @@ char	**ft_split(char const *s, char c)
 	if (!splitted)
 		return (NULL);
 	return (filling_arr(c, s, splitted, words));
-}
-#include <stdio.h>
-
-int	main(void)
-{
-	char	**splitted;
-	int		i;
-
-	splitted = ft_split("hello Ahmed Iam your mac", ' ');
-	if (!splitted)
-		return (1);
-	i = 0;
-	while (splitted[i])
-	{
-		printf("%s\n", splitted[i]);
-		i++;
-	}
-	i = 0;
-	while (splitted[i])
-		free(splitted[i++]);
-	free(splitted);
-	return (0);
 }
